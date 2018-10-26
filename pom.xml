@@ -26,6 +26,15 @@
         </dependencies>
     </dependencyManagement>
 
+	<profiles>
+		<profile>
+			<id>deploy</id>
+			<build>
+			<directory>C:\Users\Admin\Environment\wildfly-10.1.0.Final\standalone\deployments</directory>
+			</build>
+		</profile>
+	</profiles>
+	
     <dependencies>
    <dependency>
             <groupId>javax.enterprise</groupId>

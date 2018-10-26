@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Get, Create, Delete</h1>
+</head>
+
+<body>
+
+<script type="text/javascript">
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false );
+    xmlHttp.send( null );
+    document.getElementById("getAll").innerHTML = xmlHttp.responseText;
+}
+</script>
+
+<script type="text/javascript">
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false );
+    xmlHttp.send( null );
+    document.getElementById("getAll").innerHTML = xmlHttp.responseText;
+}
+</script>
+
+
+<button onclick="httpGet('http://localhost:8080/Movie/api/movie/getAllMovies')" name="getAllTestbtn">Get All</button>
+<p id="getAll">This should be the get all output</p>
+
+<button onclick="httpGet('http://localhost:8080/Movie/api/movie/addMovie')" name="createTestbtn">Create</button>
+<p id="create">This should be the create output</p>
+
+<button onclick="httpGet('http://localhost:8080/Movie/api/movie/deleteMovie')" name="deleteTestbtn">Delete</button>
+<p id="delete">This should be the delete output</p>
+
+
+</body>
+
+
+</html>
